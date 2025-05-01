@@ -1,0 +1,16 @@
+version: '3.7'
+services:
+  juice-shop:
+    image: bkimminich/juice-shop
+    ports:
+      - "3000:3000"
+
+  webgoat:
+    image: webgoat/webgoat:latest
+    ports:
+      - "8080:8080"
+
+  dvwa:
+    image: vulnerables/web-dvwa
+    ports:
+      - "80:80"
