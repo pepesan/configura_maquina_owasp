@@ -6,9 +6,9 @@ sudo apt dist-upgrade -y
 
 
 # Añadimos el usuario y su contraseña
-echo Pon la contraseña alumno
-sudo adduser alumno
-sudo passwd alumno
+echo "Creando usuario alumno con contraseña automática 'prueba'"
+sudo adduser --disabled-password --gecos "" alumno
+echo "alumno:prueba" | sudo chpasswd
 sudo usermod -aG sudo alumno
 newgrp sudo
 
