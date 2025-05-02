@@ -58,6 +58,8 @@ newgrp docker
 
 sudo docker compose up -d
 
+sudo docker compose down
+
 # terminamos
 echo "Instalación terminada, ahora ejecute el resto como alumno"
 
