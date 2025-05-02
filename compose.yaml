@@ -8,7 +8,7 @@ services:
   webgoat:
     image: webgoat/webgoat:latest
     ports:
-      - "8080:8080"
+      - "8081:8080"
 
   dvwa:
     image: vulnerables/web-dvwa
