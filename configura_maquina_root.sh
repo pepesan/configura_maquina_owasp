@@ -6,11 +6,11 @@ sudo apt dist-upgrade -y
 
 
 # Añadimos el usuario y su contraseña
-echo Pon la contraseña alumno
-sudo adduser alumno
-sudo passwd alumno
+echo "Creando usuario alumno con contraseña automática 'prueba'"
+sudo adduser --disabled-password --gecos "" alumno
+echo "alumno:prueba" | sudo chpasswd
 sudo usermod -aG sudo alumno
-newgrp sudo
+
 
 # instalamos el escritorio
 sudo apt update
@@ -18,7 +18,7 @@ sudo apt install -y ubuntu-desktop
 
 # instalamos el servidor xrdp
 
-sudo apt install xrdp
+sudo apt install xrdp -y
 
 sudo cp files/startwm.sh /etc/xrdp/startwm.sh
 
