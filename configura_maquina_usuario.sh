@@ -6,6 +6,6 @@ sudo apt install -y openjdk-17-jdk
 
 wget https://github.com/zaproxy/zaproxy/releases/download/v2.16.1/ZAP_2_16_1_unix.sh
 chmod +x ZAP_2_16_1_unix.sh
-sudo ./ZAP_2_16_1_unix.sh
+sudo ./ZAP_2_16_1_unix.sh -q
 
 
