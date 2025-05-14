@@ -1,6 +1,7 @@
 #!/bin/bash
 
-# Descarga del respositorio de código de ejemplos
+cd /root
+# Descarga del repositorio de código de ejemplos
 git clone https://github.com/pepesan/owasp-php-dev-docker.git
 cd owasp-php-dev-docker
 
