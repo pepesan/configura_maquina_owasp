@@ -9,6 +9,11 @@ cd owasp-php-dev-docker
 ./pdd init
 
 # Lanzamiento del entorno
+echo "Arrancando los servicios de docker"
 ./pdd start
+echo "Parando los servicios de docker"
+./pdd stop
 
-echo "Ya puedes abrir la url http://localhost en tu navegador"
+
+echo "Cuando quieras ejecuta ./pdd start y ya puedes abrir la url http://localhost en tu navegador"
+
