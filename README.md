@@ -19,10 +19,6 @@ cd configura_maquina_owasp
 - [Webgoat](http://127.0.0.1:8081/)
 - [web-dvwa](http://127.0.0.1:80/)
 
-## Ejecutar como usuario
-```bash
-./configura_maquina_usuario.sh
-```
 ## Entrar por RDP al servidor
 - IP de servidor
 - usuario: alumno

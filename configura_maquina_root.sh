@@ -60,6 +60,36 @@ sudo docker compose up -d
 
 sudo docker compose down
 
+
+# instalamos el openjdk 17
+sudo apt install -y openjdk-17-jdk
+# instalamos Owasp Zap
+
+wget https://github.com/zaproxy/zaproxy/releases/download/v2.16.1/ZAP_2_16_1_unix.sh
+chmod +x ZAP_2_16_1_unix.sh
+sudo ./ZAP_2_16_1_unix.sh -q
+
+
+## cambia el fichero /etc/hosts para que el nombre de la máquina sea milocal
+sudo sed -i.bak \
+  's|^127\.0\.0\.1[[:space:]]\+localhost$|127.0.0.1 localhost milocal|' \
+  /etc/hosts
+
+
+## Instalación de Intellij
+
+sudo apt install -y git
+
+# Asegurarnos de que snapd está instalado
+if ! command -v snap &> /dev/null; then
+  echo "Snap no encontrado. Instalando snapd..."
+  sudo apt install -y snapd
+fi
+
+## Instalamos el Intellij Idea Community edition
+sudo snap install intellij-idea-community --classic
+
+
 # terminamos
 echo "Instalación terminada, ahora ejecute el resto como alumno"
 
